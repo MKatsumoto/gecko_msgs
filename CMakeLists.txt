@@ -5,7 +5,7 @@ project(gecko_msgs)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  dynamixel_msgs
+#  dynamixel_msgs
   geometry_msgs
   roscpp
   rospy
@@ -71,7 +71,7 @@ add_message_files(
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(DEPENDENCIES
-  dynamixel_msgs
+#  dynamixel_msgs
   geometry_msgs
   sensor_msgs
   std_msgs
@@ -109,7 +109,14 @@ generate_messages(DEPENDENCIES
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES gecko_msgs
-  CATKIN_DEPENDS dynamixel_msgs geometry_msgs roscpp rospy sensor_msgs std_msgs message_runtime
+  CATKIN_DEPENDS
+#    dynamixel_msgs
+    geometry_msgs
+    roscpp
+    rospy
+    sensor_msgs
+    std_msgs
+    message_runtime
 #  DEPENDS system_lib
 )
 
